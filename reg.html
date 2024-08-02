@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>join us now</h2>
+    <form class="needs-validation" novalidate>
+       
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter your first name.
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter your last name.
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            <div class="valid-feedback">
+                Email is valid.
+            </div>
+            <div class="invalid-feedback">
+                Please enter a valid email address.
+            </div>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group mb-3">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
+            <div class="valid-feedback">
+                Password is valid.
+            </div>
+            <div class="invalid-feedback">
+                Please enter your password.
+            </div>
+        </div>
+
+       
+        <div class="form-inline mb-4">
+            <label class="sr-only" for="inlineInput">Phone Number</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineInput" placeholder="Phone Number" required>
+            <div class="valid-feedback">
+                Phone number is valid.
+            </div>
+            <div class="invalid-feedback">
+                Please enter your phone number.
+            </div>
+
+            <label class="sr-only" for="inlinePassword">Confirm Password</label>
+            <input type="password" class="form-control mb-2 mr-sm-2" id="inlinePassword" placeholder="Confirm Password" required>
+            <div class="valid-feedback">
+                Password confirmation is valid.
+            </div>
+            <div class="invalid-feedback">
+                Please confirm your password.
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-2">Register</button>
+        </div>
+    </form>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+           
+            var forms = document.getElementsByClassName('needs-validation');
+            
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+
+</body>
+</html>
